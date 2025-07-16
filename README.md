@@ -84,6 +84,23 @@ A Flask-based web application for simulating Azure Scheduled Events and IMDS (In
 - A few common scenarios are defined in `main.py` in the `scenarios` dictionary.
 - You can add or modify scenarios as needed. 
 
+## CLI Tool: `mockcli`
+
+In addition to the browser UI, this project now supports a CLI utility (`mockcli`) to simulate scheduled events via command line — useful for automation or testing in headless environments.
+
+### Features
+- Supports triggering all predefined scenarios
+- Generates Scheduled → Started → Completed events in order
+- Looping and delay support for continuous testing
+
+### 📦 Usage
+
+```bash
+python tools/mockcli.py --scenario "Live Migration"
+python tools/mockcli.py --all
+python tools/mockcli.py --loop --interval 30
+
+
 ## Trademarks 
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft’s Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
